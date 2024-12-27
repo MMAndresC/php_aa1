@@ -1,21 +1,13 @@
 <?php
     require './class/IfElseClass.php';
 
-    $num1 = 79;
-    $num2 = 42;
-    $num3 = 13;
-    $color1 = "Amarillo";
-    $color2 = "Azul";
-    $color3 = "Verde";
+    $num1 = $_POST['num1'] ?? 79;
+    $num2 = $_POST['num2'] ?? 42;
+    $num3 = $_POST['num3'] ?? 13;
+    $color1 = $_POST['color1'] ?? "Amarillo";
+    $color2 = $_POST['color2'] ?? "Azul";
+    $color3 = $_POST['color3'] ?? "Verde";
 
-    if(!empty($_POST)){
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-        $num3 = $_POST['num3'];
-        $color1 = $_POST['color1'];
-        $color2 = $_POST['color2'];
-        $color3 = $_POST['color3'];
-    }
     $instance = new IfElseClass($color1, $color2, $color3, $num1, $num2,$num3)
 ?>
 <main>
