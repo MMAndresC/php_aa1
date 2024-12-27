@@ -8,12 +8,10 @@ class IfElseClass
     public int $num3;
     public string $color1;
     public string $color2;
-    public string $color3;
 
-    public function __construct(string $color1, string $color2, string $color3, int $num1, int $num2, int $num3) {
+    public function __construct(string $color1, string $color2, int $num1, int $num2, int $num3) {
         $this->color1 = $color1;
         $this->color2 = $color2;
-        $this->color3 = $color3;
         $this->num1 = $num1;
         $this->num2 = $num2;
         $this->num3 = $num3;
@@ -45,6 +43,38 @@ class IfElseClass
         ;
     }
 
+    public function getAlternativeStructure(): string {
+        return
+            "Sintaxis alternativa:\n" .
+            "if(condicion): \n" .
+            "  ...comandos \n" .
+            "elseif (condicion): \n" .
+            "  ...comandos \n" .
+            "...(Todos los elseif necesarios)...\n" .
+            "else: \n" .
+            "  ...comandos \n" .
+            "endif;\n"
+        ;
+    }
+
+    public function getResultNumbers(): string {
+        if($this->num1 >$this->num2):
+            return "Número 1 es mayor que Número 2";
+        elseif ($this->num1 > $this->num3):
+            return "Número 1 es mayor que Número 3";
+        else:
+            return "Número 1 es menor o igual que Número 2 y Número 3";
+        endif;
+    }
+
+    public function getResultColors(): string {
+        if(strtoupper($this->color1) == strtoupper($this->color2)):
+            return "Color 1 es igual a Color 2";
+        else:
+            return "No son colores iguales";
+        endif;
+    }
+
     //Getters
     public function getNum1(): int
     {
@@ -69,11 +99,6 @@ class IfElseClass
     public function getColor2(): string
     {
         return $this->color2;
-    }
-
-    public function getColor3(): string
-    {
-        return $this->color3;
     }
 
 }
