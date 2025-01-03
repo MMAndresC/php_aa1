@@ -2,13 +2,13 @@
 
 class SwitchClass
 {
-    public int $num1;
-    public int $num2;
-    public int $num3;
+    private int $num1;
+    private int $num2;
+    private int $num3;
 
-    public string $fruit1;
-    public string $fruit2;
-    public string $fruit3;
+    private string $fruit1;
+    private string $fruit2;
+    private string $fruit3;
 
     public function __construct(string $fruit1, string $fruit2, string $fruit3, int $num1, int $num2, int $num3) {
         $this->fruit1 = $fruit1;

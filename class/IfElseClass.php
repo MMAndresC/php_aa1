@@ -3,11 +3,11 @@
 class IfElseClass
 {
 
-    public int $num1;
-    public int $num2;
-    public int $num3;
-    public string $color1;
-    public string $color2;
+    private int $num1;
+    private int $num2;
+    private int $num3;
+    private string $color1;
+    private string $color2;
 
     public function __construct(string $color1, string $color2, int $num1, int $num2, int $num3) {
         $this->color1 = $color1;
