@@ -1,5 +1,6 @@
 <?php
     require './class/IfElseClass.php';
+    require './utils/utils.php';
     include './partials/header.html';
 
     $num1 = $_POST['num1'] ?? 79;
@@ -8,44 +9,22 @@
     $color1 = $_POST['color1'] ?? "Amarillo";
     $color2 = $_POST['color2'] ?? "Azul";
 
-    $instance = new IfElseClass($color1, $color2, $num1, $num2, $num3)
+    $instance = new IfElseClass($color1, $color2, $num1, $num2, $num3);
 ?>
 <main>
-    <h2>Descripcion</h2>
     <div>
         <?php
-        $lines = preg_split('/\r\n|\r|\n/', $instance->getDescription());
-        foreach ($lines as $line) {
-            echo "<p>" . $line . "</p>";
-        }
+        drawLines($instance->getDescription());
         ?>
     </div>
     <div>
         <?php
-        $lines = preg_split('/\r\n|\r|\n/', $instance->getStructure());
-        foreach ($lines as $index => $line) {
-            if($index === 0) {
-                echo "<h4>" . $line . "</h4>";
-                echo "<div>";
-            } else{
-                echo "<p>" . $line . "</p>";
-            }
-        }
-        echo "</div>";
+        drawLines($instance->getStructure());
         ?>
     </div>
     <div>
         <?php
-        $lines = preg_split('/\r\n|\r|\n/', $instance->getAlternativeStructure());
-        foreach ($lines as $index => $line) {
-            if($index === 0) {
-                echo "<h4>" . $line . "</h4>";
-                echo "<div>";
-            } else{
-                echo "<p>" . $line . "</p>";
-            }
-        }
-        echo "</div>";
+        drawLines($instance->getAlternativeStructure());
         ?>
     </div>
     <div>

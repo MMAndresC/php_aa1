@@ -20,8 +20,9 @@ class IfElseClass
     public function getDescription(): string
     {
         return
-            "La estructura de control <strong>if</strong> analiza si una condicion se cumple o no, si se cumple entra en el bloque de comandos del if\n" .
-            "Puede ir acompañada con un <strong>else</strong> que agrupa los comandos que se ejecutaran si la condicion no se cumple\n" .
+            "Descripción\n" .
+            "La estructura de control <strong>if</strong> analiza si una expresión se cumple o no, si se cumple entra en el bloque de comandos del if\n" .
+            "Puede ir acompañada con un <strong>else</strong> que agrupa los comandos que se ejecutaran si la expresión no se cumple\n" .
             "Despues del primer <strong>if</strong> se puede seguir analizando otras condiciones con <strong>elseif</strong>\n" .
             "Una vez que cumpla una condicion ejecutara el bloque de comandos e ignorara el resto de sentencias <strong>elseif</strong> o <strong>else</strong>"
         ;
