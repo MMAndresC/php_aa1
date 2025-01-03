@@ -32,9 +32,9 @@
         <div>
             <div>
                 <div>
-                    <p>if($num1 > $num2){</p>
+                    <p>if(<?php echo $instance->getNum1() ?> > <?php echo $instance->getNum2() ?>){</p>
                     <p>  echo "num1 es mayor que num2"</p>
-                    <p>}elseif($num1 > $num3){</p>
+                    <p>}elseif(<?php echo $instance->getNum1() ?> > <?php echo $instance->getNum3() ?>){</p>
                     <p>  echo "num1 es mayor que num3"</p>
                     <p>}else{</p>
                     <p>  echo "num1 es menor o igual que num2 y num3"</p>
@@ -70,7 +70,7 @@
         <div>
             <div>
                 <div>
-                    <p>if(strtoupper($color1) == strtoupper($color2)){</p>
+                    <p>if(<?php echo strtoupper($instance->getColor1()) ?> == <?php echo strtoupper($instance->getColor2()) ?>){</p>
                     <p>  echo "color1 es igual a color2"</p>
                     <p>}else{</p>
                     <p>  echo "No son colores iguales"</p>

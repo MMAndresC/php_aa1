@@ -34,15 +34,15 @@ $instance = new SwitchClass($fruit1, $fruit2, $fruit3, $num1, $num2, $num3);
         <div>
             <div>
                 <div>
-                    <p>switch($num1) {</p>
-                    <p>case $num2:</p>
-                    <p>echo "El número es igual al número 2 de valor " . $num2</p>
+                    <p>switch(<?php echo $instance->getNum1() ?>) {</p>
+                    <p>case <?php echo $instance->getNum2() ?>:</p>
+                    <p>echo El número es igual al número 2 de valor <?php echo $instance->getNum2() ?></p>
                     <p>break</p>
-                    <p>case $num3:</p>
-                    <p>echo "El número es igual al número 3 de valor " . $num3</p>
+                    <p>case <?php echo $instance->getNum3() ?>:</p>
+                    <p>echo El número es igual al número 3 de valor <?php echo $instance->getNum3() ?></p>
                     <p>break</p>
                     <p>default:</p>
-                    <p>echo "El número no es igual a ninguno de los otros números"</p>
+                    <p>echo El número no es igual a ninguno de los otros números</p>
                 </div>
             </div>
 
@@ -74,13 +74,13 @@ $instance = new SwitchClass($fruit1, $fruit2, $fruit3, $num1, $num2, $num3);
         <div>
             <div>
                 <div>
-                    <p>switch($fruit1) {</p>
-                    <p>case $fruit2:</p>
-                    <p>case $fruit3:</p>
-                    <p>echo "Es una de las dos frutas"</p>
+                    <p>switch(<?php echo $instance->getFruit1() ?> ) {</p>
+                    <p>case <?php echo $instance->getFruit2() ?>:</p>
+                    <p>case <?php echo $instance->getFruit3() ?>:</p>
+                    <p>echo Es una de las dos frutas</p>
                     <p>break</p>
                     <p>default:</p>
-                    <p>echo "No es ninguna de las dos frutas"</p>
+                    <p>echo No es ninguna de las dos frutas</p>
                     <p>}</p>
                 </div>
             </div>
