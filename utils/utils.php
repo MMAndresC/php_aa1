@@ -13,9 +13,17 @@ function drawLines(String $content): void
     echo "</div>";
 }
 
-function getBaseURL() {
+function getBaseURL(): string {
     $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
     $host = $_SERVER['HTTP_HOST'];
     $basePath = dirname($_SERVER['SCRIPT_NAME']);
+    $basePath = rtrim($basePath, '/');
     return "$protocol://$host$basePath";
 }
+
+function getProjectURL(): string {
+    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'];
+    return "$protocol://$host/php_aa1";
+}
+
