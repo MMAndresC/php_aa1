@@ -3,9 +3,8 @@
 class UserModel
 {
     private $users = [
-        ['username' => 'admin', 'password' => '1234'],
-        ['username' => 'Mar', 'password' => '1234'],
-        ['username' => 'm@gmail.com', 'password' => '1234']
+        ['username' => 'admin', 'password' => '1234', 'email' => 'admin@admin.com'],
+        ['username' => 'Mar', 'password' => '1234', 'email' => 'mar@admin.com']
     ];
 
     public function checkUser($username, $password): bool {
@@ -15,5 +14,13 @@ class UserModel
             }
         }
         return false;
+    }
+
+    public function getEmailUser($username): string {
+        foreach ($this->users as $user) {
+            if ($user['username'] === $username) {
+                return $user['email'];
+            }
+        }
     }
 }
