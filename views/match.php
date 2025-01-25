@@ -1,5 +1,5 @@
 <?php
-require './class/MatchClass.php';
+require './models/MatchClass.php';
 require './utils/utils.php';
 include './partials/header.html';
 

@@ -1,5 +1,5 @@
 <?php
-require './class/ForForeachClass.php';
+require './models/ForForeachClass.php';
 require './utils/utils.php';
 include './partials/header.html';
 

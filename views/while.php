@@ -1,5 +1,5 @@
 <?php
-require './class/WhileClass.php';
+require './models/WhileClass.php';
 require './utils/utils.php';
 include './partials/header.html';
 

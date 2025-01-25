@@ -1,5 +1,5 @@
 <?php
-require './class/SwitchClass.php';
+require './models/SwitchClass.php';
 require './utils/utils.php';
 include './partials/header.html';
 
