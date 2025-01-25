@@ -1,13 +1,13 @@
 <?php
-require './models/MatchClass.php';
-require './utils/utils.php';
-include './partials/header.html';
+    require_once __DIR__ . '/../models/MatchModel.php';
+    require_once __DIR__ . '/../utils/utils.php';
+    include_once __DIR__ . '/../public/partials/header.php';
 
-$fruit1 = $_POST['fruit1'] ?? "Plátano";
-$fruit2 = $_POST['fruit2'] ?? "Cereza";
-$fruit3 = $_POST['fruit3'] ?? "Pera";
+    $fruit1 = $_POST['fruit1'] ?? "Plátano";
+    $fruit2 = $_POST['fruit2'] ?? "Cereza";
+    $fruit3 = $_POST['fruit3'] ?? "Pera";
 
-$instance = new MatchClass($fruit1, $fruit2, $fruit3);
+    $instance = new MatchModel($fruit1, $fruit2, $fruit3);
 
 ?>
 <main>
@@ -38,16 +38,16 @@ $instance = new MatchClass($fruit1, $fruit2, $fruit3);
                 <h4>Cambiar frutas del ejemplo</h4>
                 <form action="match.php" method="post">
                     <div>
-                        <label for="fruit1">Fruta 1
-                            <input type="text" name="fruit1" id="fruit1" value="<?php echo $instance->getFruit1() ?>">
+                        <label for="fruit1">Fruta 1</label>
+                        <input type="text" name="fruit1" id="fruit1" value="<?php echo $instance->getFruit1() ?>">
                     </div>
                     <div>
-                        <label for="fruit2">Fruta 2
-                            <input type="text" name="fruit2" id="fruit2" value="<?php echo $instance->getFruit2() ?>">
+                        <label for="fruit2">Fruta 2</label>
+                        <input type="text" name="fruit2" id="fruit2" value="<?php echo $instance->getFruit2() ?>">
                     </div>
                     <div>
-                        <label for="fruit3">Fruta 3
-                            <input type="text" name="fruit3" id="fruit3" value="<?php echo $instance->getFruit3() ?>">
+                        <label for="fruit3">Fruta 3</label>
+                        <input type="text" name="fruit3" id="fruit3" value="<?php echo $instance->getFruit3() ?>">
                     </div>
                     <div>
                         <input type="submit" value="Cambiar"/>
@@ -65,7 +65,7 @@ $instance = new MatchClass($fruit1, $fruit2, $fruit3);
 </main>
 
 <?php
-include './partials/footer.html';
+    include_once __DIR__ . '/../public/partials/footer.php';
 ?>
 
 

@@ -1,12 +1,12 @@
 <?php
-require './models/WhileClass.php';
-require './utils/utils.php';
-include './partials/header.html';
+    require_once __DIR__ . '/../models/WhileModel.php';
+    require_once __DIR__ . '/../utils/utils.php';
+    include_once __DIR__ . '/../public/partials/header.php';
 
-$num1 = $_POST['num1'] ?? 79;
-$num2 = $_POST['num2'] ?? 42;
+    $num1 = $_POST['num1'] ?? 79;
+    $num2 = $_POST['num2'] ?? 42;
 
-$instance = new WhileClass($num1, $num2);
+    $instance = new WhileModel($num1, $num2);
 
 ?>
 <main>
@@ -36,12 +36,12 @@ $instance = new WhileClass($num1, $num2);
             <h4>Cambiar números del ejemplo</h4>
             <form action="while.php" method="post">
                 <div>
-                    <label for="num1">Número 1
-                        <input type="text" name="num1" id="num1" value="<?php echo $instance->getNum1() ?>">
+                    <label for="num1">Número 1</label>
+                    <input type="text" name="num1" id="num1" value="<?php echo $instance->getNum1() ?>">
                 </div>
                 <div>
-                    <label for="num2">Número 2
-                        <input type="text" name="num2" id="num2" value="<?php echo $instance->getNum2() ?>">
+                    <label for="num2">Número 2</label>
+                    <input type="text" name="num2" id="num2" value="<?php echo $instance->getNum2() ?>">
                 </div>
                 <div>
                     <input type="submit" value="Cambiar"/>
@@ -78,7 +78,7 @@ $instance = new WhileClass($num1, $num2);
 </main>
 
 <?php
-include './partials/footer.html';
+    include_once __DIR__ . '/../public/partials/footer.php';
 ?>
 
 

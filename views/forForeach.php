@@ -1,11 +1,11 @@
 <?php
-require './models/ForForeachClass.php';
-require './utils/utils.php';
-include './partials/header.html';
+    require_once __DIR__ . '/../models/ForForeachModel.php';
+    require_once __DIR__ . '/../utils/utils.php';
+    include_once __DIR__ . '/../public/partials/header.php';
 
-$max = $_POST['max'] ?? 10;
+    $max = $_POST['max'] ?? 10;
 
-$instance = new ForForeachClass($max);
+    $instance = new ForForeachModel($max);
 
 ?>
 <main>
@@ -36,8 +36,8 @@ $instance = new ForForeachClass($max);
                 <h4>Cambiar máximo número</h4>
                 <form action="forForeach.php" method="post">
                     <div>
-                        <label for="max">Número máximo
-                            <input type="text" name="max" id="max" value="<?php echo $instance->getMax() ?>">
+                        <label for="max">Número máximo </label>
+                        <input type="text" name="max" id="max" value="<?php echo $instance->getMax() ?>">
                     </div>
                     <div>
                         <input type="submit" value="Cambiar"/>
@@ -72,7 +72,7 @@ $instance = new ForForeachClass($max);
 </main>
 
 <?php
-include './partials/footer.html';
+include_once __DIR__ . '/../public/partials/footer.php';
 ?>
 
 
