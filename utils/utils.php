@@ -12,3 +12,10 @@ function drawLines(String $content): void
     }
     echo "</div>";
 }
+
+function getBaseURL() {
+    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'];
+    $basePath = dirname($_SERVER['SCRIPT_NAME']);
+    return "$protocol://$host$basePath";
+}
