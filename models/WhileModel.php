@@ -1,6 +1,6 @@
 <?php
 
-class WhileClass
+class WhileModel
 {
     private int $num1;
     private int $num2;

@@ -1,6 +1,6 @@
 <?php
 
-class MatchClass
+class MatchModel
 {
 
     private string $fruit1;

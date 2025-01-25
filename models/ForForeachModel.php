@@ -1,6 +1,6 @@
 <?php
 
-class ForForeachClass
+class ForForeachModel
 {
     private int $max;
 

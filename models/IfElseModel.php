@@ -1,6 +1,6 @@
 <?php
 
-class IfElseClass
+class IfElseModel
 {
 
     private int $num1;
