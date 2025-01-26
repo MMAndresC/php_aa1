@@ -45,13 +45,15 @@ class ForForeachModel
             ;
     }
 
-    public function getResultFor() {
+    public function getResultFor(): void
+    {
         for($i=0; $i <= $this->max; $i++) {
            echo "<p>Indice = " . $i . "</p>";
         }
     }
 
-    public function getResultForEach() {
+    public function getResultForEach(): void
+    {
         $arr = ["Invierno", "Primavera", "Verano", "Otoño"];
         echo "<p>";
         print_r($arr);

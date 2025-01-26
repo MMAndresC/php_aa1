@@ -12,6 +12,12 @@
 
     $max = $_POST['max'] ?? 10;
 
+    //validations
+    if(!filter_var($max, FILTER_VALIDATE_INT)) {
+        echo "La variable tiene que ser un número";
+        $max = 10;
+    }
+
     $instance = new ForForeachModel($max);
 
 ?>

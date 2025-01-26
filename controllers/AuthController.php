@@ -57,7 +57,7 @@ class AuthController
 
         // Delete cookie
         if (isset($_COOKIE['php_aa1'])) {
-            setcookie('php_aa1', '', time() - 3600, '/'); // Expirar la cookie
+            setcookie('php_aa1', '', time() - 3600, '/'); // Expire cookie
         }
         header('HTTP/1.1 401 Unauthorized');
         header('WWW-Authenticate: Basic realm="Área Restringida"');

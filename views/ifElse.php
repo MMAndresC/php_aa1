@@ -17,6 +17,22 @@
     $color1 = $_POST['color1'] ?? "Amarillo";
     $color2 = $_POST['color2'] ?? "Azul";
 
+    $error = false;
+    if(!filter_var($num1, FILTER_VALIDATE_INT)) {
+        $error = true;
+        $num1 = 79;
+    }
+    if(!filter_var($num2, FILTER_VALIDATE_INT)) {
+        $error = true;
+        $num1 = 42;
+    }
+    if(!filter_var($num3, FILTER_VALIDATE_INT)) {
+        $error = true;
+        $num1 = 13;
+    }
+
+    if($error) echo "Valor erroneo en los números";
+
     $instance = new IfElseModel($color1, $color2, $num1, $num2, $num3);
 ?>
 <main>

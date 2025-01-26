@@ -13,6 +13,18 @@
     $num1 = $_POST['num1'] ?? 79;
     $num2 = $_POST['num2'] ?? 42;
 
+    $error = false;
+    if(!filter_var($num1, FILTER_VALIDATE_INT)) {
+        $error = true;
+        $num1 = 79;
+    }
+    if(!filter_var($num2, FILTER_VALIDATE_INT)) {
+        $error = true;
+        $num1 = 42;
+    }
+
+    if($error) echo "Valor erroneo en los números";
+
     $instance = new WhileModel($num1, $num2);
 
 ?>

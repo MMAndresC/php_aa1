@@ -17,6 +17,22 @@
     $fruit2 = $_POST['fruit2'] ?? "Cereza";
     $fruit3 = $_POST['fruit3'] ?? "Pera";
 
+    $error = false;
+    if(!filter_var($num1, FILTER_VALIDATE_INT)) {
+        $error = true;
+        $num1 = 79;
+    }
+    if(!filter_var($num2, FILTER_VALIDATE_INT)) {
+        $error = true;
+        $num1 = 42;
+    }
+    if(!filter_var($num3, FILTER_VALIDATE_INT)) {
+        $error = true;
+        $num1 = 13;
+    }
+
+    if($error) echo "Valor erroneo en los números";
+
     $instance = new SwitchModel($fruit1, $fruit2, $fruit3, $num1, $num2, $num3);
 
 ?>
