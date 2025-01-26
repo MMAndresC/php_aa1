@@ -3,6 +3,13 @@
     require_once __DIR__ . '/../utils/utils.php';
     include_once __DIR__ . '/../public/partials/header.php';
 
+    if (!isset($_COOKIE['php_aa1'])) {
+        require_once __DIR__ . '/../controllers/AuthController.php';
+        $authController = new \controllers\AuthController();
+        $authController->logout();
+        exit();
+    }
+
     $num1 = $_POST['num1'] ?? 79;
     $num2 = $_POST['num2'] ?? 42;
 

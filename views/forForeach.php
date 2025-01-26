@@ -3,6 +3,13 @@
     require_once __DIR__ . '/../utils/utils.php';
     include_once __DIR__ . '/../public/partials/header.php';
 
+    if (!isset($_COOKIE['php_aa1'])) {
+        require_once __DIR__ . '/../controllers/AuthController.php';
+        $authController = new \controllers\AuthController();
+        $authController->logout();
+        exit();
+    }
+
     $max = $_POST['max'] ?? 10;
 
     $instance = new ForForeachModel($max);
